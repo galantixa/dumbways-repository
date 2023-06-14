@@ -1,0 +1,40 @@
+### Create And Manage Git Repository
+- Masukan username dan email GitHub
+- ```git config --global user.name "username" && git config --global user.mail "jhondoe@email.com"```
+- ![Screenshot from 2023-06-15 01-13-41](https://github.com/galantixa/dumbways-repository/assets/92994294/477feb39-9800-4eb4-848b-052b0273a9e5)
+- masuk ke CLI kita generate ssh privat & public key ```ssh-keygen``` file akan tersimpan di direktori ```.ssh```
+- ![Screenshot from 2023-06-13 22-55-24](https://github.com/galantixa/dumbways-repository/assets/92994294/99ad5b01-27aa-41d1-a858-6a6c1b243f6b)
+- ![Screenshot from 2023-06-13 22-55-35](https://github.com/galantixa/dumbways-repository/assets/92994294/e34fbbc1-253d-4eca-a0ff-d821974c6af5)
+- ![Screenshot from 2023-06-13 22-55-53](https://github.com/galantixa/dumbways-repository/assets/92994294/154ed3d1-0638-49f6-9adf-9bb78f5b1b95)
+- untuk mengakses key ssh kita bisa dengan comand ```cat .ssh/id_rsa``` untuk mengakses privat key, sedangkan ```cat .ssh/id_rsa.pub``` untuk public key
+- lalu kita add public key untuk login ke GitHub kita. masuk ke setings ```SSH and GPG keys``` dan buat kunci baru
+- ![Screenshot from 2023-06-13 22-56-50](https://github.com/galantixa/dumbways-repository/assets/92994294/75501433-5b43-4be4-b205-c081d034be3f)
+- Cek apakah berhasil terkoneksi dengan akun github
+- ![Screenshot from 2023-06-15 01-14-16](https://github.com/galantixa/dumbways-repository/assets/92994294/1bce6a38-d70e-42a9-88b9-5024e54bdfc4)
+- Buat repository baru lewat GitHub
+- ![Screenshot from 2023-06-15 01-17-45](https://github.com/galantixa/dumbways-repository/assets/92994294/1260c654-986e-4713-89a9-170f5705dd49)
+- Buat direktori baru, lalu ```git init``` untuk menambahkan repository lokal. ini saya kelupaan screenshot!!!
+- ![Screenshot from 2023-06-15 01-15-33](https://github.com/galantixa/dumbways-repository/assets/92994294/d14dd226-aa00-4a64-88d0-fdc902f01d7d)
+- Buat beberapa file
+- ![Screenshot from 2023-06-15 01-15-44](https://github.com/galantixa/dumbways-repository/assets/92994294/5691c304-5227-4d3f-a33f-1dede93b5632)
+- Kita add file tersebut ke branch master lalu commit ```git add app.py index.js main.go``` ```git commit -m "first commit"```
+- ![Screenshot from 2023-06-15 01-16-09](https://github.com/galantixa/dumbways-repository/assets/92994294/7998efe7-ece5-4510-91fd-5ba61a0fdd4b)
+- ![Screenshot from 2023-06-15 01-16-21](https://github.com/galantixa/dumbways-repository/assets/92994294/15d2c29c-f7cf-4e33-9f57-b1c0163bba30)
+- Git remote ke repository GitHub kita ```git remote add origin git@github.com:galantixa/dumbways-repository.git```
+- ```git remote -v``` untuk melihat apakah sudah terkoneksi
+- ![Screenshot from 2023-06-15 01-19-21](https://github.com/galantixa/dumbways-repository/assets/92994294/b45b3de0-1dea-4108-81e2-5713a09095c5)
+- lalu kita push branch master ```git push origin master```
+- ![Screenshot from 2023-06-15 01-20-07](https://github.com/galantixa/dumbways-repository/assets/92994294/2e0ad6c5-fab2-49df-9076-715ff47790a0)
+- Lalu buat branch baru ```git branch production``` ```git branch staging```
+- ![Screenshot from 2023-06-15 01-22-51](https://github.com/galantixa/dumbways-repository/assets/92994294/b6be338c-697e-48fd-b4d5-6dde671f8098)
+- ![Screenshot from 2023-06-15 01-22-47](https://github.com/galantixa/dumbways-repository/assets/92994294/0c99369d-2529-4585-ac14-ae6b31c2363b)
+- Pindah ke branch production ```git checkout production```
+- ![Screenshot from 2023-06-15 01-26-31](https://github.com/galantixa/dumbways-repository/assets/92994294/fc16c4ef-0252-4943-ba44-726d8efa6656)
+- Saat dalam branch production kita coba edit file dan commit
+- ![Screenshot from 2023-06-15 01-30-24](https://github.com/galantixa/dumbways-repository/assets/92994294/43875972-4791-4107-8fc1-a277bbd0d151)
+- ```git push --all``` untuk push semua branch
+- ![Screenshot from 2023-06-15 01-34-07](https://github.com/galantixa/dumbways-repository/assets/92994294/5b8b347f-436f-4472-92dd-103b187244ba)
+- Merge file dari branch production ke branch master, dengan pindah branch ke master terlebih dahulu ```git checkout master```
+- Lalu jalankan ```git merge production```
+- ![Screenshot from 2023-06-15 01-38-39](https://github.com/galantixa/dumbways-repository/assets/92994294/0de73370-5457-4fa5-9e66-62075215ba15)
+
